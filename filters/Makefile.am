@@ -20,18 +20,18 @@ filtersdir = $(FILTER_PATH)
 MAGICK_FILTER_CPPFLAGS = $(AM_CPPFLAGS)
 
 MAGICKCORE_FILTER_SRCS = \
-  filters/example.c
+  filters/onewhite.c
 
 if WITH_MODULES
 filters_LTLIBRARIES = \
-  filters/example.la
+  filters/onewhite.la
 else
 filters_LTLIBRARIES =
 endif # WITH_MODULES
 filters_CPPFLAGS = $(MAGICK_FILTER_CPPFLAGS)
 
-# example filter module
-filters_example_la_SOURCES      = filters/example.c
-filters_example_la_CPPFLAGS     = $(MAGICK_FILTER_CPPFLAGS)
-filters_example_la_LDFLAGS      = $(MODULECOMMONFLAGS)
-filters_example_la_LIBADD       = $(MAGICKCORE_LIBS) $(MATH_LIBS)
+# onewhite filter module
+filters_onewhite_la_SOURCES      = filters/onewhite.c
+filters_onewhite_la_CPPFLAGS     = $(MAGICK_FILTER_CPPFLAGS)
+filters_onewhite_la_LDFLAGS      = $(MODULECOMMONFLAGS)
+filters_onewhite_la_LIBADD       = $(MAGICKCORE_LIBS) $(MATH_LIBS)
